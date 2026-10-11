@@ -432,11 +432,33 @@
 
                         <!-- TẦNG 3: MEDIA VIDEO & BANNER -->
                         <div class="space-y-3 pt-2">
-                            <div class="aspect-square w-full rounded-xl overflow-hidden border border-beige-border shadow-sm bg-black/5">
-                                <video src="NGAY DOI T8 (vuong).mp4" controls autoplay loop muted playsinline class="w-full h-full object-cover rounded-xl"></video>
+                            <!-- Video Slider -->
+                            <div class="relative group aspect-square w-full rounded-xl overflow-hidden border border-beige-border shadow-sm bg-black/5">
+                                <div id="tabsaleSlider" class="flex overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory h-full w-full">
+                                    <div class="snap-center shrink-0 w-full h-full flex items-center justify-center">
+                                        <video src="TABSALE T8 (vuong)_7mb.mp4" controls loop muted playsinline class="w-full h-full object-cover"></video>
+                                    </div>                                    
+                                </div>                               
                             </div>
-                            <div class="rounded-xl overflow-hidden border border-beige-border shadow-sm bg-beige-subtle">
-                                <img src="1200x628 KPN 88.png" alt="1200x628 KPN 88" class="w-full h-auto object-cover rounded-xl hover:scale-[1.02] transition-transform duration-300" onerror="this.src='1200x628 KPN 88.jpg'">
+                            
+                            <!-- Image Slider -->
+                            <div class="relative group rounded-xl overflow-hidden border border-beige-border shadow-sm bg-beige-subtle">
+                                <div id="tabsaleImageSlider" class="flex overflow-x-auto scroll-smooth no-scrollbar snap-x snap-mandatory w-full items-center">
+                                    <div class="snap-center shrink-0 w-full flex items-center justify-center">
+                                        <img src="1200x628 (KPN) 99.png" alt="1200x628 (KPN) 99" class="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-300" onerror="this.src='1200x628 KPN 88.jpg'">
+                                    </div>
+                                    <div class="snap-center shrink-0 w-full flex items-center justify-center">
+                                        <img src="TabsaleT9 1200x628KPN.jpg" alt="TabsaleT9 1200x628KPN" class="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-300" onerror="this.src='Omni U35 1200x628.jpg'">
+                                    </div>
+                                </div>
+                                <!-- Left Arrow Button -->
+                                <button onclick="slideCarousel('tabsaleImageSlider', 'left')" aria-label="Previous Image" class="absolute left-2 top-1/2 -translate-y-1/2 bg-navy/60 hover:bg-navy text-white w-7 h-7 rounded-full flex items-center justify-center shadow backdrop-blur-sm transition-all duration-200 z-10">
+                                    <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                                </button>
+                                <!-- Right Arrow Button -->
+                                <button onclick="slideCarousel('tabsaleImageSlider', 'right')" aria-label="Next Image" class="absolute right-2 top-1/2 -translate-y-1/2 bg-navy/60 hover:bg-navy text-white w-7 h-7 rounded-full flex items-center justify-center shadow backdrop-blur-sm transition-all duration-200 z-10">
+                                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                </button>
                             </div>
                         </div>
 
